@@ -1,16 +1,10 @@
-# flutter_widgets
+# What I Learned..?
+    1) container and sized box:
+        -Container → A versatile widget used for styling, positioning, and sizing its child with properties like padding, margin, color, and decoration.
 
-A new Flutter project.
+        -SizedBox → A simple widget used to give a fixed width and/or height or add empty space between widgets.
+    
+    2) Rows and Columns:
+        -Row → Arranges widgets horizontally in a single line.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+        -Column → Arranges widgets vertically in a single line.
