@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/Widget/Snackbar.dart';
+import 'package:flutter_widgets/Widget/alert.dart';
+import 'package:flutter_widgets/Widget/dismissible.dart';
+import 'package:flutter_widgets/Widget/drawer.dart';
 
 void main(){
   runApp(MyApp());
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Colors.deepPurple,
       ),
-      home: Snackbar(),
+      home: Alertwidget(),
     );
   }
 }
