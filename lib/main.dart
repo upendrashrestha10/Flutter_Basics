@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/Widget/alert.dart';
+import 'package:flutter_widgets/Widget/animated_text.dart';
 import 'package:flutter_widgets/Widget/bottomsheet.dart';
 import 'package:flutter_widgets/Widget/dismissible.dart';
 import 'package:flutter_widgets/Widget/drawer.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Colors.deepPurple,
       ),
-      home: Bottomsheetwidget(),
+      home: AnimatedTextwidget(),
     );
   }
 }
