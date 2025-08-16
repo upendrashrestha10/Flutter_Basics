@@ -13,6 +13,24 @@ class _FormwidgetState extends State<Formwidget> {
   String lastname = '';
   String email = '';
   String password = '';
+
+  //.......................FUNCTIONS..................
+  trysubmit(){
+    final isvalid = _formKey.currentState!.validate();
+    if(isvalid){
+      _formKey.currentState!.save();
+      submitform();
+    }else{
+      print("error");
+    }
+  }
+
+  submitform(){
+    print(firstname);
+    print(lastname);
+    print(email);
+    print(password);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +72,11 @@ class _FormwidgetState extends State<Formwidget> {
                     return null;
                   }
                 },
+
+                onSaved:(value){
+                  lastname = value.toString();
+                },
+
               ),
               
               TextFormField(
@@ -68,21 +91,36 @@ class _FormwidgetState extends State<Formwidget> {
                     return null;
                   }
                 },
+
+                onSaved:(value){
+                  email = value.toString();
+                },
               ),
               
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: 'Enter password'
                 ),
                 key:ValueKey('password'),
                 validator: (value) {
                   if (value.toString().length<=8){
-                    return 'Password should not be Empty';
+                    return 'Minimum length of the password should be 6';
                   }else{
                     return null;
                   }
                 },
+
+                onSaved:(value){
+                  password = value.toString();
+                },
               ),
+
+              TextButton(
+                onPressed: (){
+                  trysubmit();
+                }, 
+                child: Text('Submit'))
             ],
           )),
       ),
