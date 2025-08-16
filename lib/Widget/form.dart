@@ -58,18 +58,31 @@ class _FormwidgetState extends State<Formwidget> {
               
               TextFormField(
                 decoration: InputDecoration(
-                  hintText: 'Enter last name'
+                  hintText: 'Enter your Email'
                 ),
-                key:ValueKey('lastname'),
+                key:ValueKey('email'),
                 validator: (value) {
                   if (value.toString().isEmpty){
-                    return 'Last Name should not be Empty';
+                    return 'Email should not be Empty';
                   }else{
                     return null;
                   }
                 },
               ),
-
+              
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Enter password'
+                ),
+                key:ValueKey('password'),
+                validator: (value) {
+                  if (value.toString().length<=8){
+                    return 'Password should not be Empty';
+                  }else{
+                    return null;
+                  }
+                },
+              ),
             ],
           )),
       ),
