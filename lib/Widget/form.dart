@@ -46,7 +46,30 @@ class _FormwidgetState extends State<Formwidget> {
                 decoration: InputDecoration(
                   hintText: 'Enter last name'
                 ),
-              )
+                key:ValueKey('lastname'),
+                validator: (value) {
+                  if (value.toString().isEmpty){
+                    return 'Last Name should not be Empty';
+                  }else{
+                    return null;
+                  }
+                },
+              ),
+              
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Enter last name'
+                ),
+                key:ValueKey('lastname'),
+                validator: (value) {
+                  if (value.toString().isEmpty){
+                    return 'Last Name should not be Empty';
+                  }else{
+                    return null;
+                  }
+                },
+              ),
+
             ],
           )),
       ),
