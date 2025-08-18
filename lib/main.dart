@@ -7,6 +7,7 @@ import 'package:flutter_widgets/Widget/dismissible.dart';
 import 'package:flutter_widgets/Widget/drawer.dart';
 import 'package:flutter_widgets/Widget/dropdown.dart';
 import 'package:flutter_widgets/Widget/form.dart';
+import 'package:flutter_widgets/Widget/image_picker.dart';
 import 'package:flutter_widgets/Widget/tabbar.dart';
 
 void main(){
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Colors.deepPurple,
       ),
-      home:Tabbarwidget(),
+      home:ImagePickerwidget(),
     );
   }
 }
